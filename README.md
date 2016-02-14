@@ -6,4 +6,4 @@ create an ATM example using HTML, CSS, JS
 - Cancel and Back buttons are displayed where it makes sense. For example on screen no.4 (waiting for your money) it makes no sense for these buttons to be displayed. Also on the second screen (enter PIN) back button is redundant - the cancel button makes more sense here.
 - Code is W3C valid.
 - CSS browser prefixes were taken from http://pleeease.io/play. On a public project a CSS preprocessor would have taken care of this.
--
+- dd
