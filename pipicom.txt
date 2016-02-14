@@ -1,0 +1,15 @@
+
+- bug - form works only once
+- use flex
+
+- explain why some buttons must not appear on some pages
+- test on browsers
+- csspleaseee for other css
+- check W3C and comment on this
+- write comments
+- write MD file
+- explain why i dont have github, provide other websites
+
+
+
+- allow only 3 tries OK
