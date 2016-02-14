@@ -1,10 +1,15 @@
 /* animation */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;filter: alpha(opacity=0);}
+    to {opacity: 1;filter: alpha(opacity=100);}
+}
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0;filter: alpha(opacity=0);}
+    to {opacity: 1;filter: alpha(opacity=100);}
 }
 
 * {
+    /* tabs and all site images appear nicer with this code. Normally I wouldnt have this declaration so generic but would target specific elements */
     -webkit-animation: fadeIn 0.5s;
     animation: fadeIn 0.5s;
 }
@@ -15,16 +20,19 @@ body {
     text-transform: uppercase;
     color: white;
     background-color: dimgrey;
-    /*display: flex;*/
     min-height: 100vh;
+    /* unfortunately couldnt find any use for flex. Bootstrap was enough for this basic template */
+    /*display: flex;*/
     /*flex-direction: column;*/
 }
 
+/* set the number26 watermark */
 body:after {
     content: "";
     background: url("images/number26_logo.png") no-repeat center center;
     background-size: 50%;
     opacity: 0.1;
+    filter: alpha(opacity=10);
     top: 0;
     left: 0;
     bottom: 0;
@@ -33,9 +41,14 @@ body:after {
     z-index: -1;
 }
 
-.container {
-    flex: 1;
-}
+a:hover, a:focus,
+.btn-link:focus, .btn-link:hover {text-decoration: none}
+
+.btn-link {color: white}
+
+.btn-link:focus, .btn-link:hover {color: white}
+
+input {text-align: center}
 
 .tab-pane {
     height: 90vh;
@@ -59,8 +72,9 @@ body:after {
 }
 
 /* ==========================================================================
-   TAB 1
+   TAB 1 - welcome
    ========================================================================== */
+
 h1 {
     font-size: 60px;
     text-transform: none;
@@ -77,9 +91,6 @@ h1 {
     height: 30px;
     width: 120px;
     margin: 0 auto;
-    display: inline-block;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .slot_wrapper i {display: block}
@@ -90,9 +101,10 @@ h1 {
 
 @keyframes moveup {
     from {margin-top: 4%;}
-    to {margin-top: 0.5%;}
+    to {margin-top: -1%;}
 }
 
+/* credit card animation */
 @keyframes pulse {
     0% {
         color: #ffffff;
@@ -115,38 +127,50 @@ h1 {
 }
 
 /* ==========================================================================
-   TAB 2
+   TAB 2 - enter PIN
    ========================================================================== */
+
+#pin form {
+    margin: 50px auto 0 auto;
+    width: 400px;
+}
+
 #pinfield {
     width: 200px;
-    text-align: center;
     letter-spacing: 29px;
 }
 
 .alert {
     -webkit-transition: opacity 0.5s ease-in;
     transition: opacity 0.5s ease-in;
+    max-width: 390px;
+    margin: 50px auto 0 auto;
 }
 
 .visible {
     opacity: 1;
+    filter: alpha(opacity=100);
     display: block !important;
 }
 
 /* ==========================================================================
-   TAB 3
+   TAB 3 - select amount
    ========================================================================== */
+
 #selectamount .row > div {
     cursor: pointer;
     margin-bottom: 45px;
 }
 
 /* ==========================================================================
-   TAB 4
+   TAB 4 - please wait
    ========================================================================== */
+
+#preparing {padding-top: 0}
+
 .backad {
     background: url('images/ad1.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 }

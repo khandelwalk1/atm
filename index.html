@@ -43,7 +43,7 @@
                 <!--</ul>-->
 
                 <div class="slot_wrapper">
-                    <span class="slot"></span>
+                    <div class="slot"></div>
                     <a href="#pin" data-toggle="tab" class="creditcard">
                         <i class="fa fa-credit-card fa-rotate-90"></i>
                         <i class="fa fa-hand-rock-o hand"></i>
@@ -55,8 +55,6 @@
 
             <div role="tabpanel" class="tab-pane" id="pin">
 
-                <a class="btn btn-lg btn-default canceltransaction"><i class="fa fa-chevron-left"></i> CANCEL TRANSACTION</a>
-
                 <h2>Please enter your 4-digit PIN</h2>
 
                 <form class="form-inline" autocomplete="off">
@@ -64,20 +62,17 @@
                         <input type="password" maxlength="4" autocomplete="off" class="form-control input-lg" id="pinfield">
                     </div>
                     <button type="submit" class="btn btn-lg btn-default">confirm</button>
-                    <button type="reset" class="btn btn-lg btn-default">reset</button>
+                    <button type="reset" class="btn btn-lg btn-link">reset</button>
                 </form>
 
-                <div class="alert alert-danger hide">
-                    Wrong PIN. Please try again.
-                </div>
+                <div class="alert alert-danger hide"></div>
+
+                <a class="btn btn-lg btn-default canceltransaction"><i class="fa fa-chevron-left"></i> CANCEL TRANSACTION</a>
 
             </div> <!-- end of tab 2-->
 
 
             <div role="tabpanel" class="tab-pane" id="selectamount">
-
-                <a href="#pin" data-toggle="tab" class="btn btn-lg btn-default backbutton"><i class="fa fa-chevron-left"></i> BACK</a>
-                <a class="btn btn-lg btn-default canceltransaction"><i class="fa fa-chevron-left"></i> CANCEL TRANSACTION</a>
 
                 <h2>Select amount</h2>
 
@@ -97,6 +92,9 @@
                     </div>
                     <button type="submit" class="btn btn-default btn-lg">OK</button>
                 </form>
+
+                <a href="#pin" data-toggle="tab" class="btn btn-lg btn-default backbutton"><i class="fa fa-chevron-left"></i> BACK</a>
+                <a class="btn btn-lg btn-default canceltransaction"><i class="fa fa-chevron-left"></i> CANCEL TRANSACTION</a>
 
             </div> <!-- end of tab 3-->
 
@@ -128,11 +126,9 @@
     </div>
 
 
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </body>
-
-
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="scripts.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
 </html>
